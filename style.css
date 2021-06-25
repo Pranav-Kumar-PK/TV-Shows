@@ -1,0 +1,140 @@
+body {
+    background-image: url("store/pexels-huỳnh-đạt-2251206.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#search {
+    height: 100px;
+    width: 50%;
+    position: relative;
+    margin: auto;
+    margin-top: 25vh;
+}
+
+h1 {
+    font-family: 'Teko', sans-serif;
+    font-size: 5em;
+    font-weight: 700;
+    color: #c0392b;
+    display: block;
+    position: fixed;
+    left: 25px;
+    top: 4vh;
+}
+
+h1 {
+    color: #01010a;
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px, 0px 0px 0px #000000;
+    color: #ffffff;
+}
+
+@media(max-width: 1025px) {
+    body {
+        background-position: 35%;
+        background-size: cover;
+    }
+    h1 {
+        font-size: 5em;
+        position: static;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 7vh;
+    }
+    #search {
+        margin-top: 8vh;
+    }
+}
+
+.search-container {
+    background: rgba(255, 255, 255, 0.918);
+    height: 40px;
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 5s;
+    box-shadow: inset 2px 2px 2px 0px rgba(214, 5, 162, 0.897), inset -7px -7px 10px 0px rgba(0, 0, 0, .1), 7px 7px 20px 0px rgba(0, 0, 0, .1), 4px 4px 5px 0px rgba(0, 0, 0, .1);
+    text-shadow: 0px 0px 6px rgba(199, 12, 190, 0.808), -4px -4px 6px rgba(233, 6, 221, 0.911);
+    text-shadow: 2px 2px 3px rgba(211, 9, 230, 0.884);
+    box-shadow: #f8f8f8de 2px 1px 4px, #f8f8f8 -2px -1px 4px, #e4187eb9 4px 2px 8px, -4px -4px 6px #ff2d9613, inset -4px -4px 6px 0 #ff2d96a2, inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+.search-container:hover>.search-input {
+    width: 700px;
+}
+
+.search-container .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 0px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.8s;
+}
+
+.search-container .search-btn .fas {
+    color: #00ccff;
+}
+
+@keyframes hoverShake {
+    0% {
+        transform: skew(0deg, 0deg);
+    }
+    25% {
+        transform: skew(1deg, 1deg);
+    }
+    75% {
+        transform: skew(-1deg, -1deg);
+    }
+    100% {
+        transform: skew(0deg, 0deg);
+    }
+}
+
+.search-container:hover {
+    animation: hoverShake 0.3s linear 3;
+}
+
+.card-text {
+    display: none;
+}
+
+.card {
+    width: 16rem;
+    height: min-content;
+    transition: 0.5s;
+    margin: 2%;
+    margin-top: 5%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.75);
+    box-shadow: #f8f8f8de 2px 1px 4px, #f8f8f8 -2px -1px 4px, #e4187eb9 4px 2px 8px, -4px -4px 8px #ff2d9613, inset -4px -4px 6px 0 #ff2d96a2, inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+    ;
+}
+
+.card2 {
+    width: 17rem;
+}
+
+p {
+    height: 200px;
+    white-space: inherit;
+    overflow: auto;
+    text-overflow: ellipsis;
+    color: rgb(0, 0, 0);
+    transition: 1s;
+}
+
+#tv {
+    display: flex;
+    justify-content: space-evenly;
+    align-self: centre;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: auto;
+}
