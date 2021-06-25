@@ -45,7 +45,7 @@ form.addEventListener("submit", async function(e) {
     e.preventDefault();
     removeImg();
     const searchTerm = form.elements.query.value;
-    const res = await axios.get(`http://api.tvmaze.com/search/shows?q=${searchTerm}`);
+    const res = await axios.get(`https://api.tvmaze.com/search/shows?q=${searchTerm}`);
     console.log(res.data);
     generateImg(res.data);
     form.elements.query.value = "";
