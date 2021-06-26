@@ -43,13 +43,25 @@ h1 {
         align-items: center;
         margin-top: 7vh;
     }
+    .search-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 117%;
+    }
     #search {
         margin-top: 8vh;
     }
 }
 
+.btn-primary {
+    background-color: #ef28acd4;
+    border: none;
+    box-shadow: 3px 3px 6px 2px #740c60;
+}
+
 .search-container {
-    background: rgba(255, 255, 255, 0.918);
+    background: rgb(255 255 255);
     height: 40px;
     border-radius: 30px;
     padding: 10px 20px;
@@ -65,7 +77,7 @@ h1 {
 }
 
 .search-container:hover>.search-input {
-    width: 700px;
+    width: 600px;
 }
 
 .search-container .search-input {
@@ -76,10 +88,6 @@ h1 {
     font-weight: 500;
     font-size: 16px;
     transition: 0.8s;
-}
-
-.search-container .search-btn .fas {
-    color: #00ccff;
 }
 
 @keyframes hoverShake {
@@ -114,7 +122,6 @@ h1 {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.75);
     box-shadow: #f8f8f8de 2px 1px 4px, #f8f8f8 -2px -1px 4px, #e4187eb9 4px 2px 8px, -4px -4px 8px #ff2d9613, inset -4px -4px 6px 0 #ff2d96a2, inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
-    ;
 }
 
 .card2 {
@@ -137,4 +144,26 @@ p {
     flex-wrap: wrap;
     width: 70%;
     margin: auto;
+}
+
+.btn {
+    border-radius: 7.5rem;
+    font-size: 1.8rem;
+}
+
+.btn-primary {
+    background-color: #ef28acd4;
+    border: none;
+    box-shadow: 3px 3px 6px 2px #740c60;
+}
+
+.btn-primary:hover {
+    background-color: #740c60;
+    border: none;
+    box-shadow: inset 3px 3px 6px 2px #ef28acd4;
+    font-size: 2rem;
+}
+
+.search-input {
+    background-color: rgba(139, 0, 0, 0);
 }
