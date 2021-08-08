@@ -47,8 +47,7 @@ form.addEventListener("submit", async function(e) {
     const searchTerm = form.elements.query.value;
     try {
         const res = await axios.get(`https://api.tvmaze.com/search/shows?q=${searchTerm}`);
-        console.log(res.data);
-        if (!res.size()) {
+        if (res.data.length == 0) {
             const h4 = document.createElement("h4");
             h4.innerText = "Opps! No movies found";
             h4.style.alignItems = "flex-center";
@@ -90,5 +89,7 @@ function addHover() {
 
 const removeImg = () => {
     const card = document.getElementsByClassName("card");
+    const h4 = document.getElementsByName("h4");
     $(".card").remove();
+    $("h4").remove();
 }
