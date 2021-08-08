@@ -45,10 +45,26 @@ form.addEventListener("submit", async function(e) {
     e.preventDefault();
     removeImg();
     const searchTerm = form.elements.query.value;
-    const res = await axios.get(`https://api.tvmaze.com/search/shows?q=${searchTerm}`);
-    console.log(res.data);
-    generateImg(res.data);
-    form.elements.query.value = "";
+    try {
+        const res = await axios.get(`https://api.tvmaze.com/search/shows?q=${searchTerm}`);
+        console.log(res.data);
+        if (!res.size()) {
+            const h4 = document.createElement("h4");
+            h4.innerText = "Opps! No movies found";
+            h4.style.alignItems = "flex-center";
+            h4.style.color = "white";
+            document.getElementById("tv").appendChild(h4);
+        }
+        generateImg(res.data);
+        form.elements.query.value = "";
+    } catch (error) {
+        // console.log("No movies found");
+        const h4 = document.createElement("h4");
+        h4.innerText = "Opps! No movies found";
+        h4.style.alignItems = "flex-center";
+        h4.style.color = "white";
+        document.getElementById("tv").appendChild(h4);
+    }
 
 })
 
